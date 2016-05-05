@@ -34,7 +34,12 @@ $(function () {
        var data = $(this).serializeArray(),
            title = data[0].value,
            content = data[1].value;
-           
+        
+        if (content ==="" || title ==="") {
+            Materialize.toast('Cannot leave title or content empty', 4000, 'rounded')
+        }
+        else {
+            
         var dataStore = Backendless.Persistence.of(Posts);
         
         var postObject = new Posts({
@@ -47,6 +52,7 @@ $(function () {
         
         this.title.value = "";
         this.content.value = "";
+    }
     });
     
     $(document).on('click', '.logout', function (){
