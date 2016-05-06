@@ -64,7 +64,7 @@
           {{#each posts}}
             <div class="blog-post">
                 <h2 class="blog-post-title">{{title}}</h2>
-                <p class="blog-post-meta">At {{format created}}</p>
+                <p class="blog-post-meta">At {{format created}} by {{authorEmail}}</p>
                 <div>{{{content}}}</div>
         <button class="btn btn-large waves-effect waves-light deep-purple lighten-4 white-out-post">Check as complete</button>
          <button class="trash btn btn-large waves-effect waves-light deep-purple lighten-4"  type="submit" name="action" data={{objectId}}>delete</button>
@@ -72,7 +72,7 @@
           {{/each}}
       </script>
      <script id="add-blog-template" type="text/x-handlebars-template">
-          <h2>Add a new Task</h2>
+          <h2>Add a New Task</h2>
       <div class="row">
           <form class="col s12 form-add-blog">
               <div class="row">

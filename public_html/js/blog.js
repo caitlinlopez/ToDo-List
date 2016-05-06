@@ -25,7 +25,7 @@ $(function () {
     $('.main-container').html(blogHTML);
     }
     else{
-        
+        Materialize.toast('Please login to see posts')
     }
 });
  $(document).on('click', '.add-blog', function(){
@@ -71,7 +71,7 @@ function Posts(args){
     args = args || {};
     this.title = args.title || "";
     this.content = args.content || "";
-    //this.authorEmail = args.content;
+    this.authorEmail = args.content;
 }
 
 $(document).on('click','.trash', function(event) {
